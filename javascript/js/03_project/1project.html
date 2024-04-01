@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            height: 100px;
+            width: 100px;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-left: 100px;
+
+        }
+        #grey{
+            background-color: gray;
+        }
+        #white{
+            background-color: pink;
+        }
+        #blue{
+            background-color: aqua;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        .h{
+            justify-content: center;
+            display: flex;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h">Color Scheme Switcher</h1>
+    <button class="button" id="grey"></button>
+    <button class="button" id="white"></button>
+    <button class="button" id="blue"></button>
+    <button class="button" id="yellow"></button>
+    <h2 class="h">Try Clicking on one of the color above to chnage  the background
+         color of this page!</h2>
+</body>
+<!-- sir script -->
+
+<!-- <script>
+const buttons=document.querySelectorAll('.button');
+const body=document.querySelector('body');
+
+buttons.forEach(function(button){
+    button.addEventListener('click',function(e){
+        console.log(e)
+        console.log(e.target)
+if(e.target.id==='grey'){
+    body.style.backgroundColor=e.target.id;
+}
+if(e.target.id==='pink'){
+    body.style.backgroundColor=e.target.id;
+}
+if(e.target.id==='blue'){
+    body.style.backgroundColor=e.target.id;
+}
+if(e.target.id==='yellow'){
+    body.style.backgroundColor=e.target.id;
+}
+    })
+})
+</script> -->
+
+
+
+<!-- my script -->
+
+<script>
+    const buttongrey=document.querySelector('#grey')
+    buttongrey.addEventListener('click', function() {
+ document.body.style.backgroundColor="grey"
+    
+  });
+
+
+  const buttonwhite=document.querySelector('#white')
+  buttonwhite.addEventListener('click', function() {
+ document.body.style.backgroundColor="pink"
+    
+  });
+
+
+  const buttonblue=document.querySelector('#blue')
+  buttonblue.addEventListener('click', function() {
+ document.body.style.backgroundColor="aqua"
+        
+  });
+
+
+  const buttonyellow=document.querySelector('#yellow')
+  buttonyellow.addEventListener('click', function() {
+ document.body.style.backgroundColor="yellow"
+    
+  });
+</script> 
+
+
+
+
+
+
+
+</html>

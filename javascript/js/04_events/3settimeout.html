@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>shree radhe</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+      setTimeout(function(){
+        console.log("mayank");
+    },2000)
+    // jo apan ne time diya hai yuske k baad run karega phri stop ho jayega
+    const changetext=function(){
+        document.querySelector('h1').innerHTML="best js series"
+    } 
+    const changeme=setTimeout(changetext,3000)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeme)
+        console.log("stoped");
+    })
+  
+</script>
+</html>
