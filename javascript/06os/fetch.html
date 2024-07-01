@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shree radhe:-</h1>
+</body>
+<script>
+    // URL of the API
+    const apiUrl = 'http://localhost:8000/api/v1/users/register';
+
+    // Function to fetch data from the API
+    async function fetchData() {
+        try {
+            // Making the GET request
+            const response = await fetch(apiUrl);
+            
+            // Checking if the response is ok (status code 200-299)
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            // Parsing the response as JSON
+            const data = await response.json();
+
+            // Displaying the data in the HTML
+            document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+        } catch (error) {
+            // Handling any errors
+            console.error('Fetch error:', error);
+        }
+    }
+
+    // Calling the function to fetch data
+    fetchData();
+</script>
+</html>
