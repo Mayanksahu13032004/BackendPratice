@@ -26,4 +26,5 @@ import healthRouter from './routes/health.routes.js'
 app.use("/api/v1/users",healthRouter)
 
 
+
 export {app}

@@ -53,4 +53,15 @@ return res.status(201).json(
 
 
 
-export {PatientHealthRegister}
+
+
+const HealthLogin=asyncHandler(async(req,res)=>{
+console.log("health login")
+
+const {lion,tiger}=req.body
+console.log("lion is :-",lion)
+console.log("tiger is :-",tiger)
+})
+
+
+export {PatientHealthRegister,HealthLogin}
