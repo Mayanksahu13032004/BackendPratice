@@ -5,16 +5,16 @@ import mongoose,{Schema} from "mongoose";
 
 const patientSchema=new Schema(
   {
-  lion:{
+  name:{
     type:String,
     required:true
   },
-  diagonsedWith:{
+  email:{
     type:String,
     required:true
   },
-  tiger:{
-    type:String,
+  Password:{
+    type:Number,
     required:true
   },
   

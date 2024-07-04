@@ -9,14 +9,14 @@ console.log("register patient");
 console.log("The patient is reigistred is successfully:-");
 
 
-const {diagonsedWith,lion,tiger}=req.body
-console.log("diagonsedwith:-",diagonsedWith);
-console.log("lion:-",lion);
-console.log("tiger:-",tiger);
+const {name,email,Password}=req.body
+console.log("name:-",name);
+console.log("email:-",email);
+console.log("password:-",Password);
 console.log(req.body);
 
 if(
-   [diagonsedWith,lion,tiger].some((field)=>
+   [name,email,Password].some((field)=>
    field?.trim()==="")
 )
 {
@@ -25,18 +25,18 @@ if(
 
 
 const existeduser=await Patient.findOne({
-   $or:[{diagonsedWith},{lion}]
+   $or:[{email},{Password}]
 })
 
 
 if (existeduser) {
-    throw new ApiError(409,"user with email or username already exits")
+    throw new ApiError(409,"user with email or name already exits")
 }
 
 const patient=await Patient.create({
-   diagonsedWith,
-   lion,
-   tiger
+   name,
+   email,
+   Password
 })
 
 const createPatient=await Patient.findById(patient._id).select("")
@@ -58,9 +58,9 @@ return res.status(201).json(
 const HealthLogin=asyncHandler(async(req,res)=>{
 console.log("health login")
 
-const {lion,tiger}=req.body
-console.log("lion is :-",lion)
-console.log("tiger is :-",tiger)
+const {email,Password}=req.body
+console.log("email is :-",email)
+console.log("passwoerd is :-",Password)
 })
 
 
