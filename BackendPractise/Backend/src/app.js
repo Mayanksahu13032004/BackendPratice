@@ -20,10 +20,12 @@ app.use(cookieParser())
 
 
 // routes 
-import healthRouter from './routes/health.routes.js'
+import userRouter from './routes/user.routes.js'
+import patientdetail from './routes/patientDetail.routes.js'
 
 
-app.use("/api/v1/users",healthRouter)
+app.use("/api/v1/users",userRouter)
+app.use("/api/v1/patient",patientdetail)
 
 
 

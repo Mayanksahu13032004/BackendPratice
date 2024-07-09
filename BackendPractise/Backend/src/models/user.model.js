@@ -13,7 +13,7 @@ const patientSchema=new Schema(
     type:String,
     required:true
   },
-  Password:{
+  password:{
     type:Number,
     required:true
   },
