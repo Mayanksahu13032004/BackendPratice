@@ -64,10 +64,22 @@ const searchPatientByOPD=asyncHandler(async(req,res)=>{
 
 console.log("opdsearch",opdsearch);
 
-
+if(opdsearch==null){
+// throw new ApiError(201,"Invalid OPDNo.")
 return res.status(201).json(
-    new ApiResponse(200,opdsearch,"Patient serach  is Sucessfully:-")
- )
+    new ApiResponse(400,"Invalid OPDNo.")
+)
+}
+
+
+else{
+    return res.status(201).json(
+        new ApiResponse(200,opdsearch,"Patient serach is Sucessfully:-")
+     )
+}
+
+
+
     
  })
 export {patientdetailform,searchPatientByOPD}
