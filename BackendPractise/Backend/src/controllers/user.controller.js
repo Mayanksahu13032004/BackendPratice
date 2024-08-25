@@ -6,7 +6,7 @@ import { ApiResponse } from "../utils/ApiResponse.js";
 
 
 
-const registerPateint = asyncHandler(async(req,res)=>{
+const userRegister = asyncHandler(async(req,res)=>{
     console.log("register patient");
 console.log("The patient is reigistred is successfully:-");
 
@@ -60,7 +60,7 @@ return res.status(201).json(
 
 
 
-const HealthLogin=asyncHandler(async(req,res)=>{
+const Login=asyncHandler(async(req,res)=>{
 console.log("health login")
 
 const {email,password}=req.body
@@ -92,7 +92,7 @@ return res.status(200).json({message : "exists" })
 
 
 
-export {registerPateint,HealthLogin}
+export {userRegister,Login}
 
 
 
