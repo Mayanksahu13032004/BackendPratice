@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "react-email": "^2.1.6",
-    "resend": "^4.0.0"
-  }
-}
